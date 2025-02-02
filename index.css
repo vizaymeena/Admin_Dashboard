@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(31, 11, 91);
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    gap: 60px;
+    min-width: 360px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: rgb(15, 15, 49);
+    height: 8vh;
+    justify-content: center;
+    align-items: center;
+}
+.nav a {
+    text-decoration: none;
+    color: rgb(230, 229, 247);
+    letter-spacing: 3px;  
+    font-size: 20px; 
+    transition: color 0.5s ease-in-out;
+}
+.nav a:hover{
+    color: brown;
+}
+
+#movieSection{
+    height: 100vh;
+    width: 90%;
+    margin: 0.2em auto 0;
+    border: 2px solid black;
+}
+.sl_child{
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.sl_child h3{
+    text-align: center;
+    background-color: rgb(65, 74, 157);
+    color: white;
+    width: 100%;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+#genreselect{
+    padding: 6px;
+    margin-top: 0.3em;
+    border-radius: 10px;
+    background-color: rgba(32, 27, 181, 0.459);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(30, 30, 109, 0.945);
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.choice{
+    width: 100%;
+    height: 74.5vh;
+    border: 2px solid red;
+}
+
+/* Selected genre Css */
+
+.genreshow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between grid items */
+    padding: 20px;
+    justify-content: center; /* Center items if fewer */
+}
+
+.genreshow div {
+    background: #f8f8f8; /* Light background for better contrast */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.genreshow img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.genreshow h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.sub_moviediv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+
+/* Gold,Silver,Platinum classlist  */
+.sub_moviediv h5{
+    height: 100%;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: rgb(220, 43, 129);
+}
+.silver{
+    color: gray;
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.gold{
+    color: gold;
+    border: 2px solid gold;
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+.platinum{
+    color: #150a78;
+    border: 2px solid #150a78;
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+}
+.activeclass
+{
+    background-color: rgb(81, 216, 90);
+    color: rgb(186, 33, 22) !important;
+    border: 2px solid rgb(33, 127, 42) !important;
+    transform: scale(0.9);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.genreshow p {
+    font-size: 14px;
+    color: #666;
+}
+
+.genreshow #bookMovie {
+    background: #fc5928;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.genreshow #bookMovie:hover {
+    background:orangered;
+
+}

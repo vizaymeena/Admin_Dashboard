@@ -177,3 +177,119 @@ header{
     background:orangered;
 
 }
+
+
+/* Seats.html */
+
+
+body{
+    background: linear-gradient();
+    background: linear-gradient(to right,rgb(47, 47, 91),rgb(0, 0, 0));
+}
+
+
+/* Seats Booking section */
+/* Section 2 */
+#date_day{
+    display: none;
+}
+/* section 3 */
+.seat-container{
+    background: linear-gradient(to right,rgb(47, 47, 91),rgb(0, 0, 0));
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+}
+
+.screen{
+    text-align: center;
+    width: 80%;
+    margin: 2em auto 3em;
+    border-top: 5px solid white;
+    border-radius: 30px 30px 0px 0px ;
+    position: relative;
+    z-index: 1;
+}
+.screen::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border: 0px solid transparent;
+    width: 100%;
+    box-shadow: 0px 10px 20px 4px white;
+}
+.screen div{
+    width: 50%;
+    margin: 20px auto auto auto;
+    color: white;
+    
+}
+.seats{
+    height: 35em;
+    width: 90%;
+    margin: 1em auto auto auto;
+    border: 2px solid rgb(101, 71, 194);
+    display: flex;
+    flex-direction: column;
+}
+.row-container{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1em;
+    
+}
+.seat_code-left,
+.seat_code-right{
+    height: 20px;
+    width: fit-content;
+    margin-top: 1em;
+    color: white;
+    
+}
+.row1-left,.row1-right{
+    height: 20px;
+
+    width: 30%;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+    /* border: 2px solid green; */
+}
+.row1-middle{
+    margin-top: 1em;
+    width: 20%;
+    height: 25px;
+    border-left: 2px solid  rgb(77, 34, 117);
+    border-right: 2px solid  rgb(77, 34, 117);
+    border-bottom: 2px solid blueviolet;
+}
+
+.row2{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+    
+}
+.row5{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+.rmiddle{
+    width: 20%;
+    height: 25px;
+    /* border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black; */
+    border-left: 2px solid  rgb(77, 34, 117);
+    border-right: 2px solid  rgb(77, 34, 117);
+    border-bottom: 2px solid blueviolet;
+    
+}

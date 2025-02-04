@@ -3,44 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="user-form.css">
+    <title>Ticket Form</title>
+    <!-- <link rel="stylesheet" href="userform.css"> -->
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>/* Global Styles */
+        body {
+            background: linear-gradient(135deg, #1e1e2f, #29293d);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        /* Form Container */
+        #bookingform {
+            width: 400px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(12px);
+            text-align: center;
+            color: #ffffff;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Heading */
+        #bookingform h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #e0e0e0;
+            position: relative;
+        }
+        
+        #bookingform h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #4caf50;
+            margin: 8px auto 0;
+            border-radius: 5px;
+        }
+        
+        /* Form Fields */
+        #bookingform div {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+        
+        #bookingform label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #cfcfcf;
+            display: block;
+        }
+        
+        /* Input & Select Styling */
+        #bookingform input, 
+        #bookingform select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Placeholder Styling */
+        #bookingform input::placeholder,
+        #bookingform select {
+            color: #b0b0b0;
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        /* Input Focus Effect */
+        #bookingform input:focus,
+        #bookingform select:focus {
+            border: 1px solid #4caf50;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Error Message */
+        .show_error {
+            font-size: 14px;
+            color: #ff5252;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        /* Submit Button */
+        .submit input {
+            width: 100%;
+            padding: 12px;
+            background: #4caf50;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        /* Button Hover Effect */
+        .submit input:hover {
+            background: #43a047;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+        }
+        
+        /* Button Press Effect */
+        .submit input:active {
+            transform: scale(0.98);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 450px) {
+            #bookingform {
+                width: 90%;
+            }
+        }
+        </style>
+
 </head>
 <body>
-    <form id="userForm">
-        <input type="text" id="name" placeholder="Enter your name" required />
-        <input type="email" id="email" placeholder="Enter your email" required />
-        <input type="tel" id="phone" placeholder="Enter your phone number" required />
-        <button type="submit">Submit</button>
-    </form>
-    
-    <script>
-        document.getElementById("userForm").addEventListener("submit", async function(e) {
-            e.preventDefault();
-            
-            let userData = {
-                name: document.getElementById("name").value,
-                email: document.getElementById("email").value,
-                phone: document.getElementById("phone").value,
-                movie: localStorage.getItem("selectedMovie")
-            };
-    
-            // Store data using Fetch API (assuming a backend API endpoint)
-            await fetch("https://your-backend-api.com/users", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(userData)
-            });
-    
-            // Store in localStorage for display on confirmation page
-            localStorage.setItem("userData", JSON.stringify(userData));
-    
-            // Redirect to confirmation page
-            window.location.href = "confirmation.html";
-        });
-    </script>
+<form onload="fetchData()" id="bookingform" action="">
+   
+        <h2>TICKET BOOKING FORM</h2>
+       
+        <div>
+            <label for="name">Name :</label>
+            <input type="text" id="name" placeholder="Full Name">
+        </div>
 
-    <script src="user-form.js"></script>
+        <div>
+            <label for="email">Email :</label>
+            <input type="text" id="email" placeholder="Email">
+        </div>
+
+        <div>
+            <label for="contact">Contact :</label>
+            <input type="text" id="contact" placeholder="Contact">
+        </div>
+
+        <div>
+            <label for="person">Person :</label>
+            <input type="text" id="person" placeholder="No. of Persons">
+        </div>
+
+        <div>
+            <label for="class">Class Category :</label>
+            <select id="select" name="select" >
+                <option value="0">Select</option>
+                <option data-rate="200" value="silver">Silver</option>
+                <option data-rate="280" value="gold">Gold</option>
+                <option data-rate="350" value="platinum">Platinum</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="meals">Meals :</label>
+            <select id="meals" name="meals" >
+                <option data-rate="0" value="None">None</option>
+                <option value="popcorn">Pop Corn</option>
+                <option value="cold drink">Cold Drink</option>
+                <option value="water bottle">Water Bottle</option>
+            </select>
+        </div>
+        <p class="show_error">Error will appear here</p>
+
+        <div class="submit">
+            <input onclick="return insert()" id="submit" type="submit" value="Submit">
+        </div>
+
+</form>
+  
     
+  <!-- sweet aleart -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="user-form.js"></script>
 </body>
 </html>

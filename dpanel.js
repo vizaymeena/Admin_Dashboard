@@ -41,13 +41,7 @@
 }
 }
 
-/* POST METHOD */
-const addmovie = document.querySelector("#addmovie")
-addmovie.addEventListener('click',()=>{
-
-    
 
 
 
-})
 

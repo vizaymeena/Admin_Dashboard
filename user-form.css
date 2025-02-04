@@ -1,0 +1,92 @@
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right,rgb(28, 19, 61),black);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#bookingform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    gap: 20px;
+    background: linear-gradient(to right,rgb(18, 20, 48),black);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    max-width: 500px;
+}
+
+#bookingform div {
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+#bookingform div label{
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+#bookingform div input{
+    height: 35px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+}
+#bookingform div input::placeholder{
+
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: rgb(66, 63, 63);
+}
+#select,#meals{
+    letter-spacing: 2px;
+    color: rgb(64, 64, 64);
+    height: 35px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#submit{
+    color: rgb(66, 27, 138);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+#submit:hover{
+    background-color:rgb(66, 27, 138); 
+    width: 60%;
+    color: white;
+}
+
+/* ClassList for placeholder */
+
+.errorstyle::placeholder{
+    font-style: italic;
+    color: red !important;
+}

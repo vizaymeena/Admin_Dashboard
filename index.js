@@ -60,9 +60,9 @@ genreSelect.addEventListener("change", (event) => {
                 <h3>${e.name}</h3>
                 <div class = "sub_moviediv"> 
                   <h5> Select class </h5>
-                  <button data-class="Silver: ₹200" class="silver"> Silver: ₹200 </button>
-                  <button data-class="Gold: ₹280" class="gold"> Gold: ₹280 </button>
-                  <button data-class="Platinum: ₹350 " class="platinum"> Platinum: ₹350 </button>
+                  <button data-rate="200" data-class="Silver: ₹200" class="silver"> Silver: ₹200 </button>
+                  <button data-rate="280" data-class="Gold: ₹280" class="gold"> Gold: ₹280 </button>
+                  <button data-rate="350" data-class="Platinum: ₹350 " class="platinum"> Platinum: ₹350 </button>
                 </div>
                 <button id="bookMovie" data-movie="${e.name}">Book</button> 
             `;  // above through book function storing movie name value to localstorage for further use in another page
@@ -70,13 +70,14 @@ genreSelect.addEventListener("change", (event) => {
         });
     }
 
+    /* Book Now */
     let bookMovie = document.querySelector("#bookMovie")
 
-    bookMovie.addEventListener("click", function() { // Regular function\
+    bookMovie.addEventListener("click", function() { // Regular function
 
     
-      
       const movieName = this.getAttribute("data-movie"); // Correct: this is the button
+     
       localStorage.setItem("selectedMovie",movieName)
 
     });
@@ -94,6 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event Delegation: Handle single click for class selection
     genreShow.addEventListener("click", function (event) {
+
+        event.preventDefault()
+        
         const target = event.target;
 
         // Condition 1: When a class selection button is clicked
@@ -131,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Redirect to confirmation page
     
             window.location.href = "user-form.html";
+            
         }
     });
 

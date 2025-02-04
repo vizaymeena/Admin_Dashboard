@@ -21,7 +21,10 @@
         .header {
             background-color: #1d2227;
             color: #fff;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
             padding: 20px;
             font-size: 24px;
             font-weight: 600;
@@ -95,12 +98,48 @@
         .edit-btn{
             margin-left: 1em;
         }
+        .moviename{
+            color: rgb(222, 222, 7);
+        }
+        .confirmed{
+            color: green;
+        }
+        .checked{
+            border: 2px solid white;
+            color: white;
+            border-radius: 50%;
+            padding: 4px;
+            background-color: green;
+        }
+        .home{
+            color: rgb(229, 229, 229);
+            border: 3.5px solid white;
+            background-color: green;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+           transition: 0.6s ease-in-out;
+        }
+        .home:hover{
+            background-color: white;
+            color: green;
+            border: 3.5px solid green;
+            transform: scale(0.95);
+        }
     </style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body onload="fetchData()">
 
     <!-- Header -->
-    <div class="header">Your Bookings</div>
+    <div class="header">
+
+        <div>Your Booking</div>
+
+        <span class="spanhome"><a href="index.html"><i class="fa-solid fa-house home"></i></a></i></span>
+    </div>
+
 
     <!-- Booking Container -->
     <div class="booking-container" id="booking-list">

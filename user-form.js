@@ -74,6 +74,7 @@ let insert = function() {
             "rate": rate,
             "price": price,
             "seat":selectClass,
+            "moviename":localStorage.getItem("selectedMovie")
         })
     }).then(response => response.json())
       .then(data => {
@@ -87,3 +88,6 @@ let insert = function() {
       location.href="userpanel.html"
     return false;
 };
+
+
+

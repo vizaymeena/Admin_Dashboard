@@ -28,8 +28,12 @@ header{
     font-size: 20px; 
     transition: color 0.5s ease-in-out;
 }
-.nav a:hover{
-    color: brown;
+#home:hover{
+    color: green;
+
+}
+#user:hover{
+    color: blue;
 }
 
 #movieSection{

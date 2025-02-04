@@ -28,6 +28,7 @@
         /* Form Container */
         #bookingform {
             width: 500px;
+            height: 96vh;
             padding: 0px 25px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
@@ -41,7 +42,8 @@
         /* Heading */
         #bookingform h2 {
             font-size: 24px;
-            margin-bottom: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: #e0e0e0;
@@ -51,10 +53,10 @@
         #bookingform h2::after {
             content: "";
             display: block;
-            width: 50px;
+            width: 80%;
             height: 3px;
             background: #4caf50;
-            margin: 8px auto 0;
+            margin: 4px auto 0;
             border-radius: 5px;
         }
         
@@ -112,28 +114,25 @@
         /* Submit Button */
         .submit input {
             width: 100%;
-            padding: 12px;
-            background: #4caf50;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: bold;
+           padding: 12px;
             text-transform: uppercase;
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
+            
         }
-        
+        .submit{
+            transition: background 0.4s ease-in,border 0.1s ease-in-out;
+        }
         /* Button Hover Effect */
-        .submit input:hover {
-            background: #43a047;
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.6);
+        .submit:hover {
+            background: #0c4b0f;
+            border: 2px solid white;        
+            border-radius: 8px;
+            box-sizing: border-box;
+    
         }
         
-        /* Button Press Effect */
-        .submit input:active {
-            transform: scale(0.98);
-        }
         
         /* Responsive Adjustments */
         @media (max-width: 450px) {
@@ -142,6 +141,19 @@
             }
         }
 
+        .goback{
+            color: red;
+            
+            font-size: 45px;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: -25px;
+            transition: color 0.5s ease-in-out;
+        }
+        .goback:hover{
+            color: orangered;
+        }
        
         </style>
 
@@ -149,7 +161,7 @@
 <body>
 <form onload="fetchData()" id="bookingform" action="">
    
-        <h2>TICKET BOOKING FORM</h2>
+        <h2>TICKET BOOKING FORM <a href="index.html"> <i class="fa-regular fa-circle-xmark goback"></i></a></h2>
        
         <div>
             <label for="name">Name :</label>
@@ -190,19 +202,22 @@
                 <option value="water bottle">Water Bottle</option>
             </select>
         </div>
-        <p class="show_error">Error will appear here</p>
+        <p class="show_error">Any Uncertain error will appear here</p>
 
         <div class="submit">
-            <input onclick="return insert()" id="submit" type="submit" value="Submit">
+            <input onclick="return insert()" id="submit" type="submit" value="Confirm Booking">
         </div>
+        
 
 </form>
 
+
+<div id="update"></div>
 
   
     
   <!-- sweet aleart -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   <script src="user-form.js"></script>
+  <script src="user-form.js"></script>
 </body>
 </html>

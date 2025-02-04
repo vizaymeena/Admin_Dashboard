@@ -1,103 +1,56 @@
 {
+  "users": [
+    {
+      "id": "1",
+      "name": "Vijay",
+      "email": "vizaymeena@gmail.com",
+      "password": "vizay1999",
+      "role": "admin"
+    },
+    {
+      "id": "3",
+      "name": "Vijay",
+      "email": "jatinparmar@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "3",
+      "name": "Vijay Meena",
+      "email": "himanshu@gmail.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "4",
+      "name": "ragini goswami",
+      "email": "raginigoswami@gmail.com",
+      "password": "654321",
+      "role": "user"
+    }
+  ],
   "MovieTicket": [
     {
-      "id": "a0b2",
-      "name": "jatin parmar",
-      "email": "vizaymeena@gmail.com",
-      "contact": "9283823912",
-      "person": "10",
-      "Meals": "cold drink",
-      "rate": "200",
-      "price": 2000,
-      "seat": "silver"
-    },
-    {
-      "id": "0bb9",
-      "name": "jatin parmar",
-      "email": "vizaymeena@gmail.com",
-      "contact": "9283823912",
-      "person": "10",
-      "Meals": "cold drink",
-      "rate": "200",
-      "price": 2000,
-      "seat": "silver"
-    },
-    {
-      "id": "3084",
-      "name": "jatin parmar",
-      "email": "vizaymeena@gmail.com",
-      "contact": "9283823912",
-      "person": "10",
-      "Meals": "cold drink",
-      "rate": "200",
-      "price": 2000,
-      "seat": "silver"
-    },
-    {
-      "id": "a0f4",
-      "name": "jatin parmar",
-      "email": "vizaymeena@gmail.com",
-      "contact": "9283823912",
-      "person": "10",
-      "Meals": "cold drink",
-      "rate": "200",
-      "price": 2000,
-      "seat": "silver"
-    },
-    {
-      "id": "27ce",
-      "name": "Vijay Meena",
-      "email": "vizaymeena@gmail.com",
-      "contact": "9283823912",
-      "person": "5",
-      "Meals": "cold drink",
-      "rate": "200",
-      "price": 1000,
-      "seat": "silver"
-    },
-    {
-      "id": "a542",
-      "name": "Vijay Meena",
-      "email": "vizaymeena@gmail.com",
-      "contact": "9283823912",
-      "person": "5",
-      "Meals": "cold drink",
-      "rate": "200",
-      "price": 1000,
-      "seat": "silver"
-    },
-    {
-      "id": "e85a",
-      "name": "Himanshu",
-      "email": "himanshu@gmail.com",
-      "contact": "9283823912",
-      "person": "1",
+      "id": "0f7e",
+      "name": "Allu Arjun",
+      "email": "alluarjun@gmail.com",
+      "contact": "0987654321",
+      "person": "2",
       "Meals": "popcorn",
       "rate": "280",
-      "price": 280,
+      "price": 560,
       "seat": "gold"
     },
     {
-      "id": "cb34",
-      "name": "Himanshu",
-      "email": "himanshu@gmail.com",
-      "contact": "9283823912",
-      "person": "1",
-      "Meals": "popcorn",
-      "rate": "280",
-      "price": 280,
-      "seat": "gold"
-    },
-    {
-      "id": "b48a",
-      "name": "Himanshu",
-      "email": "himanshu@gmail.com",
-      "contact": "9283823912",
-      "person": "1",
-      "Meals": "popcorn",
-      "rate": "280",
-      "price": 280,
-      "seat": "gold"
+      "id": "5ee0",
+      "name": "Mahes Babu",
+      "email": "maheshbabu@gmail.com",
+      "contact": "1234567890",
+      "person": "4",
+      "Meals": "water bottle",
+      "rate": "350",
+      "price": 1400,
+      "seat": "platinum"
     }
   ]
 }

@@ -84,6 +84,6 @@ let insert = function() {
       });
 
 
-      location.href="confirm.html"
+      location.href="userpanel.html"
     return false;
 };

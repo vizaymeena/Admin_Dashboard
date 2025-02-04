@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #231f50;
+        }
+        .container {
+            background: rgb(35, 53, 108);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .container h2{
+            color:white;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+        input {
+            width: 90%;
+            padding: 12px;
+            border: none;
+
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background: green;
+            color: white;
+            height: 40px;
+            width: 100px;
+            border: none;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: 0.6s ease-in-out;
+        }
+        button:hover{
+            width: 150px;
+            border-radius: 0px;
+            letter-spacing: 3px;
+            background-color: rgb(33, 22, 188);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        <input type="text" id="name" placeholder="Enter name" required><br>
+        <input type="email" id="email" placeholder="Enter email" required><br>
+        <input type="password" id="password" placeholder="Enter password" required><br>
+        <button onclick="return signup()">Signup</button>
+    </div>
+
+    <script src="signup.js">
+       
+    </script>
+</body>
+</html>

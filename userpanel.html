@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Panel</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6c687a9d;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background-color: #1d2227;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Booking Container */
+        .booking-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Booking Card */
+        .booking-card {
+            background: #4a4876;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px;
+            width: 300px;
+            border-left: 6px solid #3498db;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .booking-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Title */
+        .booking-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #0c0b12;
+            margin-bottom: 8px;
+        }
+
+        /* Info */
+        .booking-info {
+            font-size: 14px;
+            color: #ffffff;
+            margin: 5px 0;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        /* Highlighted Text */
+        .highlight {
+            font-weight: 600;
+            color: #e74c3c;
+        }
+
+        /* Button */
+        .cancel-btn,.edit-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 12px;
+            background-color: #211b67;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .cancel-btn:hover,.edit-btn:hover {
+            background-color: #37199b;
+        }
+        .edit-btn{
+            margin-left: 1em;
+        }
+    </style>
+</head>
+<body onload="fetchData()">
+
+    <!-- Header -->
+    <div class="header">Your Bookings</div>
+
+    <!-- Booking Container -->
+    <div class="booking-container" id="booking-list">
+        <!-- Booking cards will be inserted here dynamically -->
+    </div>
+
+    <script src="userpanel.js">
+       
+    </script>
+
+</body>
+</html>

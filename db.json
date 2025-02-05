@@ -29,5 +29,42 @@
       "role": "user"
     }
   ],
-  "MovieTicket": []
+  "MovieTicket": [
+    {
+      "id": "49db",
+      "name": "Vijay Meena",
+      "email": "vizaymeena@gmail.com",
+      "contact": "7987725298",
+      "person": "2",
+      "Meals": "cold drink",
+      "rate": "350",
+      "price": 700,
+      "seat": "platinum",
+      "moviename": "BLACK WIDOW"
+    },
+    {
+      "id": "2f27",
+      "name": "Vijay Meena",
+      "email": "vizaymeena@gmail.com",
+      "contact": "7987725298",
+      "person": "2",
+      "Meals": "cold drink",
+      "rate": "350",
+      "price": 700,
+      "seat": "platinum",
+      "moviename": "BLACK WIDOW"
+    },
+    {
+      "id": "b59f",
+      "name": "Vijay Meena",
+      "email": "rajpatidar@gmail.com",
+      "contact": "7987725298",
+      "person": "2",
+      "Meals": "cold drink",
+      "rate": "200",
+      "price": 400,
+      "seat": "silver",
+      "moviename": "BLACK WIDOW"
+    }
+  ]
 }

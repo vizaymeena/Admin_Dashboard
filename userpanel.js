@@ -51,7 +51,6 @@ let del=async(id)=> {
 
     alert("Booking Successfully Canceled")
 
-   
         location.href="user-form.html"
        
 }

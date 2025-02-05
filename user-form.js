@@ -1,4 +1,4 @@
-  const url = "http://localhost:3000/MovieTicket"
+const url = "http://localhost:3000/MovieTicket"
 let insert = function() {
   
     // Get the form data
@@ -43,7 +43,7 @@ let insert = function() {
     // Get the selected rate and save to localStorage
     const selectrate = document.getElementById('select');
     let selectedOption = selectrate.options[selectrate.selectedIndex];
-    let rate = selectedOption.getAttribute('data-rate');
+    let rate = selectedOption.getAttribute('data-rate'); // data-rate from options
     if (rate && rate !== "0") {
         localStorage.setItem('selectedMealRate', rate);
     } else {
@@ -79,7 +79,6 @@ let insert = function() {
     }).then(response => response.json())
       .then(data => {
           alert("Booking Successful");
-          window.location.href = "confirm.html";
       }).catch(error => {
           console.error("Error:", error);
       });

@@ -5,19 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirm Booking</title>
   <link rel="stylesheet" href="dasboard.css">
+  <style>
+    body{
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to right, rgb(11, 70, 20),black
+        );
+    }
+    .heads{
+        background-color: rgb(11, 76, 27);
+        letter-spacing: 2px;
+        color: white;
+        text-transform: uppercase;
+
+    }
+    .headdetails{
+        background-color: rgb(29, 106, 80);
+        color: rgb(225, 205, 211);
+        text-transform: uppercase;
+        font-size: 12.5px;
+    }
+    .table{
+        background-color: rgba(128, 128, 128, 0.281);
+    }
+    .adminhead{
+        color: rgb(62, 62, 159);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    .home{
+        text-decoration: none;
+        font-size: 20px;
+        border-bottom: 2px solid purple;
+    }
+  </style>
 </head>
 <body id="body" onload="fetchData()">
 
     <header>
         <nav>
-            <a href="index.html">Home</a>
+            <a class="home" href="index.html">Home</a>
         
 
         </nav>
     </header>
-    <h2>Admin Dashboard</h2>
+    <h2 class="adminhead">Admin Dashboard</h2>
 
-    <table border="1">
+    <table class="table" border="1" cellspacing="5px" cellpadding="15px">
+
+        <thead>
+            <tr class="heads">
+                <th>Movie</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Persons</th>
+                <th>Seat</th>
+                <th>Meals</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+          </thead>
        
         <tbody class="tbody">
             <!-- Data will be inserted here dynamically -->
